@@ -345,7 +345,7 @@ def send_confirmation_email(booking_info):
     if cc_emails and isinstance(cc_emails, str):
         cc_emails = [email.strip() for email in cc_emails.split(',') if email.strip()]
     
-    subject = f"✅ Booking Confirmation: (ID-{booking_info['booking_id']})"
+    subject = f"✅ Meeting Room Booking Confirmation: (ID-{booking_info['booking_id']})"
     return send_email(booking_info['email'], cc_emails, subject, html_content)
 
 def send_cancellation_email(booking_info):
